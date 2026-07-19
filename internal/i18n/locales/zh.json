@@ -1,0 +1,58 @@
+{
+  "app.name": "Gen - AI 路由器",
+  "app.version": "版本",
+  "app.description": "用 Go 编写的轻量级 AI 路由器",
+
+  "server.starting": "正在启动服务器...",
+  "server.started": "服务器已在端口 %d 上启动",
+  "server.stopping": "正在停止服务器...",
+  "server.stopped": "服务器已停止",
+  "server.error": "服务器错误: %s",
+
+  "provider.trying": "正在尝试提供商: %s (优先级 %d)",
+  "provider.success": "提供商 %s 成功",
+  "provider.failed": "提供商 %s 失败: %s",
+  "provider.cooldown": "提供商 %s 在 %d 次失败后暂停 %v",
+  "provider.none_available": "没有可用的提供商",
+  "provider.health_check": "健康检查: %s",
+
+  "handler.chat_request": "聊天请求: model=%s stream=%v messages=%d",
+  "handler.all_failed": "所有提供商失败: %s",
+  "handler.method_not_allowed": "方法不允许",
+  "handler.invalid_json": "无效的 JSON: %s",
+  "handler.model_required": "模型是必需的",
+  "handler.read_body_failed": "无法读取请求正文",
+
+  "config.loaded": "已加载 %d 个提供商",
+  "config.using_key": "使用 %s 的 API 密钥，来自 %s",
+  "config.disabled": "提供商 %s 已通过 %s 禁用",
+
+  "health.status": "状态",
+  "health.version": "版本",
+  "health.uptime": "运行时间",
+  "health.providers": "提供商",
+  "health.port": "端口",
+
+  "models.title": "可用模型",
+  "models.count": "%d 个模型可用",
+
+  "error.server_error": "服务器错误",
+  "error.not_found": "未找到",
+  "error.bad_request": "错误的请求",
+  "error.unauthorized": "未授权",
+  "error.forbidden": "禁止",
+  "error.timeout": "请求超时",
+  "error.rate_limit": "超出速率限制",
+
+  "cors.enabled": "CORS 已启用",
+  "cors.origin": "允许来源: %s",
+
+  "log.startup": "========================================",
+  "log.port": "  端口: %d",
+  "log.providers": "  提供商: %d",
+  "log.endpoints": "  端点:",
+  "log.endpoint_chat": "    POST /v1/chat/completions",
+  "log.endpoint_models": "    GET  /v1/models",
+  "log.endpoint_health": "    GET  /health",
+  "log.endpoint_stats": "    GET  /stats"
+}

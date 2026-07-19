@@ -1,0 +1,58 @@
+{
+  "app.name": "Gen - Bộ định tuyến AI",
+  "app.version": "Phiên bản",
+  "app.description": "Bộ định tuyến AI nhẹ viết bằng Go",
+
+  "server.starting": "Đang khởi động máy chủ...",
+  "server.started": "Máy chủ đã khởi động trên cổng %d",
+  "server.stopping": "Đang dừng máy chủ...",
+  "server.stopped": "Máy chủ đã dừng",
+  "server.error": "Lỗi máy chủ: %s",
+
+  "provider.trying": "Đang thử nhà cung cấp: %s (ưu tiên %d)",
+  "provider.success": "Nhà cung cấp %s thành công",
+  "provider.failed": "Nhà cung cấp %s thất bại: %s",
+  "provider.cooldown": "Nhà cung cấp %s tạm dừng trong %v sau %d lần thất bại",
+  "provider.none_available": "Không có nhà cung cấp nào khả dụng",
+  "provider.health_check": "Kiểm tra sức khỏe: %s",
+
+  "handler.chat_request": "Yêu cầu chat: model=%s stream=%v messages=%d",
+  "handler.all_failed": "Tất cả nhà cung cấp thất bại: %s",
+  "handler.method_not_allowed": "Phương thức không được phép",
+  "handler.invalid_json": "JSON không hợp lệ: %s",
+  "handler.model_required": "Model là bắt buộc",
+  "handler.read_body_failed": "Không thể đọc nội dung yêu cầu",
+
+  "config.loaded": "Đã tải %d nhà cung cấp",
+  "config.using_key": "Sử dụng khóa API cho %s từ %s",
+  "config.disabled": "Nhà cung cấp %s đã bị tắt qua %s",
+
+  "health.status": "Trạng thái",
+  "health.version": "Phiên bản",
+  "health.uptime": "Thời gian hoạt động",
+  "health.providers": "Nhà cung cấp",
+  "health.port": "Cổng",
+
+  "models.title": "Các Model có sẵn",
+  "models.count": "%d model có sẵn",
+
+  "error.server_error": "Lỗi Máy chủ",
+  "error.not_found": "Không tìm thấy",
+  "error.bad_request": "Yêu cầu không hợp lệ",
+  "error.unauthorized": "Chưa xác thực",
+  "error.forbidden": "Bị cấm",
+  "error.timeout": "Hết thời gian yêu cầu",
+  "error.rate_limit": "Vượt quá giới hạn tốc độ",
+
+  "cors.enabled": "CORS đã bật",
+  "cors.origin": "Cho phép Origin: %s",
+
+  "log.startup": "========================================",
+  "log.port": "  Cổng: %d",
+  "log.providers": "  Nhà cung cấp: %d",
+  "log.endpoints": "  Các điểm cuối:",
+  "log.endpoint_chat": "    POST /v1/chat/completions",
+  "log.endpoint_models": "    GET  /v1/models",
+  "log.endpoint_health": "    GET  /health",
+  "log.endpoint_stats": "    GET  /stats"
+}

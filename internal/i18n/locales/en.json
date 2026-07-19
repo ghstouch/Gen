@@ -1,0 +1,58 @@
+{
+  "app.name": "Gen - AI Router",
+  "app.version": "Version",
+  "app.description": "Lightweight AI Router written in Go",
+
+  "server.starting": "Starting server...",
+  "server.started": "Server started on port %d",
+  "server.stopping": "Stopping server...",
+  "server.stopped": "Server stopped",
+  "server.error": "Server error: %s",
+
+  "provider.trying": "Trying provider: %s (priority %d)",
+  "provider.success": "Provider %s succeeded",
+  "provider.failed": "Provider %s failed: %s",
+  "provider.cooldown": "Provider %s in cooldown for %v after %d failures",
+  "provider.none_available": "No available providers",
+  "provider.health_check": "Health check: %s",
+
+  "handler.chat_request": "Chat request: model=%s stream=%v messages=%d",
+  "handler.all_failed": "All providers failed: %s",
+  "handler.method_not_allowed": "Method not allowed",
+  "handler.invalid_json": "Invalid JSON: %s",
+  "handler.model_required": "Model is required",
+  "handler.read_body_failed": "Failed to read request body",
+
+  "config.loaded": "Loaded %d providers",
+  "config.using_key": "Using API key for %s from %s",
+  "config.disabled": "Provider %s disabled via %s",
+
+  "health.status": "Status",
+  "health.version": "Version",
+  "health.uptime": "Uptime",
+  "health.providers": "Providers",
+  "health.port": "Port",
+
+  "models.title": "Available Models",
+  "models.count": "%d models available",
+
+  "error.server_error": "Server Error",
+  "error.not_found": "Not Found",
+  "error.bad_request": "Bad Request",
+  "error.unauthorized": "Unauthorized",
+  "error.forbidden": "Forbidden",
+  "error.timeout": "Request Timeout",
+  "error.rate_limit": "Rate Limit Exceeded",
+
+  "cors.enabled": "CORS enabled",
+  "cors.origin": "Allow Origin: %s",
+
+  "log.startup": "========================================",
+  "log.port": "  Port: %d",
+  "log.providers": "  Providers: %d",
+  "log.endpoints": "  Endpoints:",
+  "log.endpoint_chat": "    POST /v1/chat/completions",
+  "log.endpoint_models": "    GET  /v1/models",
+  "log.endpoint_health": "    GET  /health",
+  "log.endpoint_stats": "    GET  /stats"
+}

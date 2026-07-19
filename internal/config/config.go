@@ -1,5 +1,13 @@
 package config
 
+import (
+	"fmt"
+	"log"
+	"os"
+	"sort"
+	"strings"
+)
+
 const (
 	// Port - hardcoded server port
 	Port = 2500
@@ -60,4 +68,38 @@ func DefaultProviders() []Provider {
 			Enabled:  true,
 		},
 	}
+}
+
+// LoadProviders from env vars or use defaults
+// Example env vars:
+//
+//	GEN_OPENAI_KEY=sk-xxx
+//	GEN_GROQ_KEY=gsk_xxx
+//	GEN_TOGETHER_KEY=xxx
+//	GEN_OPENROUTER_KEY=sk-or-xxx
+//	GEN_GEMINI_KEY=xxx
+func LoadProviders() []Provider {
+	providers := DefaultProviders()
+
+	// Sort by priority
+	sort.Slice(providers, func(i, j int) bool {
+		return providers[i].Priority < providers[j].Priority
+	})
+
+	for i := range providers {
+		envKey := fmt.Sprintf("GEN_%s_KEY", strings.ToUpper(providers[i].Name))
+		if key := os.Getenv(envKey); key != "" {
+			providers[i].APIKey = key
+			log.Printf("[Config] Using API key for %s from %s", providers[i].Name, envKey)
+		}
+
+		// Check if provider is explicitly disabled
+		disableKey := fmt.Sprintf("GEN_%s_DISABLE", strings.ToUpper(providers[i].Name))
+		if os.Getenv(disableKey) == "1" || os.Getenv(disableKey) == "true" {
+			providers[i].Enabled = false
+			log.Printf("[Config] Provider %s disabled via %s", providers[i].Name, disableKey)
+		}
+	}
+
+	return providers
 }
